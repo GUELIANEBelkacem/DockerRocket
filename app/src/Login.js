@@ -110,7 +110,7 @@ const Login = () =>{
         setFirstTime(false);
         console.log("local");
         console.log(localStorage.getItem('userv'));
-        const response = await fetch(`http://localhost:8000/users/login/${localStorage.getItem('userv')}/${localStorage.getItem('passwordv')}`);
+        const response = await fetch(`http://0.0.0.0:8000/users/login/${localStorage.getItem('userv')}/${localStorage.getItem('passwordv')}`);
         const data = await response.json();
         setUserNameV(localStorage.getItem('userv'));
         setPasswordV(localStorage.getItem('passwordv'));
@@ -121,7 +121,7 @@ const Login = () =>{
         }
     }else{
         console.log("new");
-        const response = await fetch(`http://localhost:8000/users/login/${userNameV}/${passwordV}`);
+        const response = await fetch(`http://0.0.0.0:8000/users/login/${userNameV}/${passwordV}`);
         const data = await response.json();
         console.log(data);
         if(data.answer){
