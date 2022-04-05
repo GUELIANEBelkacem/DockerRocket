@@ -32,7 +32,7 @@ const Product = ({usr, cat, prod, callback})=> {
             
         };
 
-        fetch('http://localhost:8000/users/update', requestOptions);
+        fetch('http://0.0.0.0:8000/users/update', requestOptions);
         callback();
         //window.location.reload();
     }
