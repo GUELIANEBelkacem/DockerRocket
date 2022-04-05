@@ -16,8 +16,6 @@ services:
       - CHOKIDAR_USEPOLLING=true
 
   hungerclient:
-    depends_on:
-      - hungerserver
     container_name: hungerclient
     build:
       context: .
