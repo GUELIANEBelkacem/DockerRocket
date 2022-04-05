@@ -10,6 +10,8 @@ COPY server.go ./
 COPY /users/user.go ./users/
 COPY /recipe/recipe.go ./recipe/
 
-EXPOSE 8080
+RUN go build
 
-CMD ["go", "run", "main.go"]
+EXPOSE 8000
+
+CMD ["go", "run", "server.go"]
