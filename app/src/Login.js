@@ -155,7 +155,7 @@ const Login = () =>{
         
         const cleanSearch = search.replace(/\s/g, '')
         localStorage.setItem('search', cleanSearch)
-        const response = await fetch(`http://localhost:8000/users/search/${userNameV}/${cleanSearch}`);
+        const response = await fetch(`http://0.0.0.0:8000/users/search/${userNameV}/${cleanSearch}`);
         const data = await response.json();
         
         setUsers(data);
