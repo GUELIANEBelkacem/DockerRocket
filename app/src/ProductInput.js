@@ -44,7 +44,7 @@ const ProductInput = ({callback, userID})  =>{
             
         };
 
-        fetch('http://0.0.0.0:8000/users/submit', requestOptions)
+        fetch('http://belkacemhunger:8000/users/submit', requestOptions)
         /*
         .then(async response => {
             const isJson = response.headers.get('content-type')?.includes('application/json');
