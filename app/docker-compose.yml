@@ -3,6 +3,7 @@ version: '3.7'
 services:
 
   hungerserver:
+    hostname: belkacemhunger
     container_name: hungerserver
     restart: unless-stopped
     build:
