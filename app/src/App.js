@@ -25,7 +25,7 @@ const App = () => {
   const searchRecette = async () => {
     //const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=${foodAPIID}&app_key=${foodAPIKey}`);
     const cleanSearch = search.replace(/\s/g, '+')
-    const response = await fetch(`http://0.0.0.0:8000/recipes/search/${cleanSearch}`);
+    const response = await fetch(`http://belkacemhunger:8000/recipes/search/${cleanSearch}`);
     const data = await response.json();
     console.log(data)
     setRecipes(data.results);
